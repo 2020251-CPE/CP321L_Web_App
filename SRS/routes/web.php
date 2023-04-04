@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('landingPage');
+});
+
+Route::redirect('/','/home',302);
+
+Route::get('/user',function(Request $request){
+    dd($request);
+    return 'lol';
+});
+
+Route::get('/res/{id}',function($id){
+    return response(view('landingPage',['id'=>$id]),201)
+        ->header('Content-Type','text/html');
 });
