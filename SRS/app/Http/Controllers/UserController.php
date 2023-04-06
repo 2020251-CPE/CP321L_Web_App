@@ -17,6 +17,9 @@ class UserController extends Controller
             'age' => '21',
             'email' => 'qwerty@gmail.com'
         );
-        return view('user',['data'=>$data]);
+        $DBdata = ['data'=>'data from DB'];
+        return view('user',['data'=>$data])
+            ->with('DBdata',$DBdata)
+            ->with('number','69420'); //if data from DB, just pass the Variable
     }
 }
