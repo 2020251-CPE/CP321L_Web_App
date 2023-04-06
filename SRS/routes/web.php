@@ -25,7 +25,7 @@ Route::get('/home', function () {
 
 Route::redirect('/','/home',302);
 
-Route::get('/user',function(Request $request){
+Route::get('/user1',function(Request $request){
     dd($request);
     return 'lol';
 });
@@ -52,5 +52,5 @@ Route::get('/res-download',function(){
     return response()->download($path,$name,$headers);
 });
 
-Route::get('/users',[UserController::class,'index']);
-Route::get('/user1/{id}',[UserController::class,'show']);
+Route::get('/login',[UserController::class,'index'])->name('login');
+Route::get('/user/{id}',[UserController::class,'show']);
