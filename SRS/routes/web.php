@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -19,11 +20,9 @@ Route::get('/main',function(){ //Default Main route for Laravel
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('landingPage');
-});
+Route::get('/',[StudentController::class,'index']);
 
-Route::redirect('/','/home',302);
+Route::redirect('/home','/',302); //redirect sample
 
 Route::get('/user1',function(Request $request){
     dd($request);
@@ -54,3 +53,5 @@ Route::get('/res-download',function(){
 
 Route::get('/login',[UserController::class,'index'])->name('login');
 Route::get('/user/{id}',[UserController::class,'show']);
+
+Route::get('/students',[StudentController::class,'index']);
