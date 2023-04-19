@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/main',function(){ //Default Main route for Laravel
-    return view('welcome');
+    return view('app');
 });
 
 Route::get('/',[StudentController::class,'index']);
@@ -55,3 +55,6 @@ Route::get('/login',[UserController::class,'index'])->name('login');
 Route::get('/user/{id}',[UserController::class,'show']);
 
 Route::get('/students',[StudentController::class,'index']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
