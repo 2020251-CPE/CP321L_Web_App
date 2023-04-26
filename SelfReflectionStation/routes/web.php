@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LandingPageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,10 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/home', function () {
-    return view('app');
-});
-Route::redirect('/','/home',302);
+Route::get('/app/{page}',[LandingPageController::class,'LDPG'])->name('search');
+
+Route::redirect('/','/app/home',302);
+Route::redirect('/app','/app/home',302);
 
 Auth::routes();
 
