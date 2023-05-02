@@ -19,10 +19,8 @@
  
 </head>
 <body>
-    <div class="container"><!--can be changed to container-fluid-->
         <div class="navbar navbar-expand">
-            <div class="container-fluid">
-                <a class="navbar-brand text-light" href="#">Logo</a>
+            <div >
                 <form action="{{route('home')}}" method="get"> 
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active link-light hover-effect" href="{{ route('search', ['page' => 'home']) }}">HOME</a></li>
@@ -33,6 +31,8 @@
                 </form>
             </div>
         </div>
+    <div class="container-fluid"><!--can be changed to container-fluid-->
+        
         <?php $currentUrl = url()->current(); $path = parse_url($currentUrl, PHP_URL_PATH);?>
         @if ($path == '/app/home')
             @include('pages.home')

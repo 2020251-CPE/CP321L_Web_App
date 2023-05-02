@@ -5,7 +5,7 @@
     --pallet3: #a4978e;
     --pallet4: #766e6b;
 }
-.container {
+.container-fluid {
     background-color: var(--pallet1);
 }
 .navbar {
