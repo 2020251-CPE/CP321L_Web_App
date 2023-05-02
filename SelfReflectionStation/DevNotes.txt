@@ -1,9 +1,0 @@
-
-FRONTEND
-    Color Pallet: (see ColorPalette.jpg)
-        - #e2bfac , rgba(226,191,172,255)
-        - #edebdf , rgba(237,235,223,255)
-        - #a4978e , rgba(164,151,142,255)
-        - #766e6b , rgba(118,110,107,255)
-    Font:
-        - 
