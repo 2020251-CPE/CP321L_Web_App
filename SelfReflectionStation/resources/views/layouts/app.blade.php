@@ -19,6 +19,7 @@
  
 </head>
 <body>
+        <!--NAV-->
         <div class="navbar navbar-expand">
             <div >
                 <form action="{{route('home')}}" method="get"> 
@@ -31,6 +32,7 @@
                 </form>
             </div>
         </div>
+
     <div class="container-fluid"><!--can be changed to container-fluid-->
         
         <?php $currentUrl = url()->current(); $path = parse_url($currentUrl, PHP_URL_PATH);?>
@@ -44,5 +46,23 @@
             @include('pages.AnxietyTest')
         @endif
     </div>
+
+    <!--FOOTER-->
+    <footer class="page-footer">
+        <div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-1 text-justify" >
+                    <h6 class="text-uppercase font-weight-bold">Notice</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet dolor fringilla libero venenatis maximus. Proin malesuada felis tortor, in sodales felis dignissim at. Nulla sapien eros, porta vulputate accumsan quis, iaculis et lorem. </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">Made by: Angelo Rafael F. Recio | © 2021 Copyright: MyWebsite.com</div>
+    </footer>
 </body>
 </html>
