@@ -5,6 +5,8 @@
     --pallet3: #a4978e;
     --pallet4: #766e6b;
 }
+
+
 .container-fluid {
     background-color: var(--pallet1);
 }
@@ -17,4 +19,14 @@
   }
 .hover-effect:hover {
     background-color:  var(--pallet3);
+}
+
+.p-content{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.page-footer{
+    padding: 2rem;
+    background-color:  var(--pallet4);
+    color: white;
 }
