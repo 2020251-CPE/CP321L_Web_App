@@ -1,4 +1,19 @@
+
 import 'bootstrap';
+import '../../node_modules/boxicons/css/boxicons.min.css'
+import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import '../../node_modules/glightbox/dist/css/glightbox.min.css'
+import '../../node_modules/remixicon/fonts/remixicon.css'
+import'../../node_modules/swiper/swiper-bundle.min.css'
+import '../css/app.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+AOS.init({
+easing: 'ease-out-quart',
+delay: 0,
+duration: 750
+})
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
