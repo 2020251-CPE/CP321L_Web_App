@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anxiety Test</title>
+  <style>
+    /* Add some basic styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: url('bak.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .radio-group {
+      display: flex;
+    }
+    .radio-group label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Anxiety Test</h1>
+  <form action="submit_anxiety_test.php" method="post">
+
+    <label for="question1">Question 1: Do you often feel nervous or anxious?</label>
+    <div class="radio-group">
+      <label for="question1_never">
+        <input type="radio" id="question1_never" name="question1" value="never" required>
+        Never
+      </label>
+      <label for="question1_not_frequent">
+        <input type="radio" id="question1_not_frequent" name="question1" value="not_frequent">
+        Not frequent
+      </label>
+      <label for="question1_sometimes">
+        <input type="radio" id="question1_sometimes" name="question1" value="sometimes">
+        Sometimes
+      </label>
+      <label for="question1_frequent">
+        <input type="radio" id="question1_frequent" name="question1" value="frequent">
+        Frequent
+      </label>
+      <label for="question1_very_frequent">
+        <input type="radio" id="question1_very_frequent" name="question1" value="very_frequent">
+        Very frequent
+      </label>
+    </div>
+
+    <label for="question2">Question 2: Do you have trouble sleeping due to anxiety?</label>
+    <div class="radio-group">
+      <label for="question2_never">
+        <input type="radio" id="question2_never" name="question2" value="never" required>
+        Never
+      </label>
+      <label for="question2_not_frequent">
+        <input type="radio" id="question2_not_frequent" name="question2" value="not_frequent">
+        Not frequent
+      </label>
+      <label for="question2_sometimes">
+        <input type="radio" id="question2_sometimes" name="question2" value="sometimes">
+        Sometimes
+      </label>
+      <label for="question2_frequent">
+        <input type="radio" id="question2_frequent" name="question2" value="frequent">
+        Frequent
+      </label>
+      <label for="question2_very_frequent">
+       

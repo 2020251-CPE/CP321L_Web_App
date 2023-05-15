@@ -217,7 +217,7 @@ h6 {
 .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
-  margin-left: 5px;
+  margin-left: 1px;
 }
 
 .navbar a:hover,
@@ -406,7 +406,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/bck.png") top center;
+  background: url("../img/bc.png") top center;
   background-size: contain;
   position: relative;
 }
@@ -428,12 +428,13 @@ h6 {
 }
 
 #hero h1 {
-  margin: 0;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 64px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    font-family: ui-monospace;
+}
 }
 
 #hero h1 span {
@@ -994,7 +995,7 @@ section {
 }
 
 .counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+  background: url("../img/hel.png") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
