@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Sign Up Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,15 +57,18 @@
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
-    <form action="login.php" method="POST">
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="POST">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 
-      <input type="submit" value="Login">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <input type="submit" value="Sign Up">
     </form>
   </div>
 </body>

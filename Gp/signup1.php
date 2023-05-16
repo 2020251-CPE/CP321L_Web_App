@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Sign Up Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-image: url("bkl.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
       background-color: #f4f4f4;
     }
 
     .container {
-	opacity:85%;
       max-width: 400px;
       margin: 0 auto;
       padding: 40px;
@@ -57,15 +53,18 @@
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
-    <form action="login.php" method="POST">
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="POST">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 
-      <input type="submit" value="Login">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <input type="submit" value="Sign Up">
     </form>
   </div>
 </body>
