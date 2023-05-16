@@ -1,20 +1,22 @@
-
-
 --Create Table for the Test 
-CREATE TABLE Question_Category (
-    id UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE QuestionCategory(
+    id INT AUTO_INCREMENT NOT NULL,
     Category VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
 );
-CREATE Table Answers_Table (
-    id UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE AnswersTable(
+    id INT AUTO_INCREMENT NOT NULL,
     AnswerType VARCHAR(255) NOT NULL,
-    AnswerValues JSON NOT NULL
-)
-
-CREATE TABLE Question_Table (
-    id UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    AnswerValues JSON NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE QuestionsTable(
+    id INT AUTO_INCREMENT NOT NULL,
     Question VARCHAR(255) NOT NULL,
-    CategoryID INT FOREIGN KEY REFERENCES Question_Category(id),
-    AnswersID INT FOREIGN KEY REFERENCES Answers_Table(id)
+    CategoryID INT NOT NULL,
+    AnswersID INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (CategoryID) REFERENCES QuestionCategory(id), 
+    FOREIGN KEY (AnswersID) REFERENCES AnswersTable(id)
 );
 
