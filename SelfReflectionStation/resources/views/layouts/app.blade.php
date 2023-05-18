@@ -17,6 +17,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    
 </head>
 <body>
     
@@ -24,7 +25,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">SRS<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -73,7 +74,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/aboutq.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('img/aboutq.jpg') }}" class="img-fluid" alt="about">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
             <h3>About Page</h3>
@@ -99,7 +100,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="image col-lg-6" style='background-image: url("assets/img/back.png");' data-aos="fade-right"></div>
+          <div class="image col-lg-6" style='background-image: url("../../img/back.png");' data-aos="fade-right"></div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-receipt"></i>
@@ -223,12 +224,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/q2a.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/q2a.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/q2a.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/q2a.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -236,12 +237,12 @@
           </div>
  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/q1.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/q1.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/q1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/q1.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -251,12 +252,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/q3.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/q3.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 3</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/q3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/q3.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -265,12 +266,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a2.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/a2.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 2</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                 <a href="assets/img/portfolio/a2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                 <a href="{{ asset('img/portfolio/a2.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -279,12 +280,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a1.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/a1.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 2</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/a1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/a1.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -293,12 +294,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/q4.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/q4.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/q4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/q4.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -307,12 +308,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a3.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/a3.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/a3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/a3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -320,12 +321,12 @@
           </div>
  <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a4a.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/a4a.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/a4a.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/a4a.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -333,12 +334,12 @@
           </div>
 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a5.png" class="img-fluid" alt="">
+              <img src="{{ asset('img/portfolio/a5.png') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/a5.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('img/portfolio/a5.png') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -422,12 +423,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/linatoc.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('img/team/linatoc.jpg') }}" class="img-fluid" alt="Khryzza Linatoc">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/khryzzaaa"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/khryzzaaa/"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://instagram.com/khryzzaaa?igshid=OGQ5ZDc2ODk2ZA=="><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/khryzza-linatoc-a88655277"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -440,12 +441,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/team/recio.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('img/team/recio.jpg') }}" class="img-fluid" alt="Angelo Rafael Recio">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/_RAF43L_"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/angelorafael.recio.5"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/angelo_recio_/"><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/angelo-rafael-recio-95a02a1a5/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -458,12 +459,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/team/simbahan.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('img/team/simbahan.jpg') }}" class="img-fluid" alt="Shairmain Simbahan">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/Simba22020646?t=jS0SvPie-r1TXSP3T9aWlw&s=09"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/shairmainedinglasan.simbahan.5?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/shairmainedinglasan.simbahan.5?mibextid=ZbWKwL"><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://ph.linkedin.com/in/shairmain-simbahan-861390277"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -608,6 +609,8 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  
 
 </body>
 </html>
