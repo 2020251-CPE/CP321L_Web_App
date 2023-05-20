@@ -59,21 +59,21 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="anxietytest.html">Anxiety Test</a></li>
+          <li><a class="nav-link scrollto" href="quizzes/anxietytest.html">Anxiety Test</a></li>
           <li class="dropdown"><a href="#"><span>Addiction Test</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="shopping.html">Shopping Addiction Test</a></li>
-              <li><a href="gambling.html">Gambling Addiction Test</a></li>
-              <li><a href="alcohol.html">Alcohol Addiction Test</a></li>
-              <li><a href="drugs.html">Drugs Addiction Test</a></li>
+              <li><a href="quizzes/shopping.html">Shopping Addiction Test</a></li>
+              <li><a href="quizzes/gambling.html">Gambling Addiction Test</a></li>
+              <li><a href="quizzes/alcohol.html">Alcohol Addiction Test</a></li>
+              <li><a href="quizzes/drugs.html">Drugs Addiction Test</a></li>
             </ul>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="signup2.html" class="get-started-btn scrollto">Sign Up</a>
-	<a href="inner-page.html" class="get-started-btn scrollto">Log In</a>
+      <a href="forms/signup2.php" class="get-started-btn scrollto">Sign Up</a>
+	<a href="forms/login.php" class="get-started-btn scrollto">Log In</a>
 
     </div>
   </header><!-- End Header -->
@@ -176,7 +176,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-donate-heart"></i></div>
-              <h4><a href="anxietytest.html">Anxiety Test</a></h4>
+              <h4><a href="quizzes/anxietytest.html">Anxiety Test</a></h4>
               <p>Assesses an individual's level of anxiety through a series of questions. Results can help identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -184,7 +184,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-shopping-bag"></i></div>
-              <h4><a href="shopping.html">Shopping Addiction Test</a></h4>
+              <h4><a href="quizzes/shopping.html">Shopping Addiction Test</a></h4>
               <p>Evaluates compulsive buying behavior through a series of questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -192,7 +192,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-dice-5"></i></div>
-              <h4><a href="gambling.html">Gambling Addiction Test</a></h4>
+              <h4><a href="quizzes/gambling.html">Gambling Addiction Test</a></h4>
               <p> Assesses compulsive gambling behavior through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -200,7 +200,7 @@
           <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-beer"></i></div>
-              <h4><a href="alcohol.html">Alcohol Addiction Test</a></h4>
+              <h4><a href="quizzes/alcohol.html">Alcohol Addiction Test</a></h4>
               <p>Evaluates alcohol use disorder through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -208,7 +208,7 @@
           <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-injection"></i></div>
-              <h4><a href="drugs.html">Drugs Addiction Test</a></h4>
+              <h4><a href="quizzes/drugs.html">Drugs Addiction Test</a></h4>
               <p>Evaluates substance use disorder through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -448,12 +448,12 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/linatoc.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/linatoc.jpg" class="img-flid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/khryzzaaa"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/khryzzaaa/"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://instagram.com/khryzzaaa?igshid=OGQ5ZDc2ODk2ZA=="><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/khryzza-linatoc-a88655277"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -468,10 +468,10 @@
               <div class="member-img">
                 <img src="assets/img/team/recio.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/_RAF43L_"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/angelorafael.recio.5"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/angelo_recio_/"><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/angelo-rafael-recio-95a02a1a5/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -486,10 +486,10 @@
               <div class="member-img">
                 <img src="assets/img/team/simbahan.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a target="_blank" href="https://twitter.com/Simba22020646?t=jS0SvPie-r1TXSP3T9aWlw&s=09"><i class="bi bi-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/shairmainedinglasan.simbahan.5?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/shairmainedinglasan.simbahan.5?mibextid=ZbWKwL"><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://ph.linkedin.com/in/shairmain-simbahan-861390277"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -612,11 +612,11 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="anxietytest.html">Anxiety Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="shopping.html">Shopping Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="gambling.html">Gambling Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="alcohol.html">Alcohol Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="drugs.html">Drugs Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="quizzes/anxietytest.html">Anxiety Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="quizzes/shopping.html">Shopping Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="quizzes/gambling.html">Gambling Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="quizzes/alcohol.html">Alcohol Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="quizzes/drugs.html">Drugs Addiction Test</a></li>
             </ul>
           </div>
 
