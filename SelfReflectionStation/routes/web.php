@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\QuizController;
 
 
 /*
@@ -24,3 +25,6 @@ Route::redirect('/app','/app/home',302);
 Auth::routes();
 
 Route::get('/home1', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/test/{page}',[App\Http\Controllers\QuizController::class,'GetQuiz']);
