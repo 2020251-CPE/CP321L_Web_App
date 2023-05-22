@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anxiety Test</title>
+  <title>{{$title}}</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,33 +65,24 @@ opacity:85%;
         <div class="container">
         <h2>{{$title}}</h2>
         <?php
-        $array = array();
+        $answerArray = array();
         $genderErrArr = array();
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            for ($i = 0; $i < 20; $i++) {
-                if (empty($_POST["Q".$i])) {
-                    $genderErr = "Answer is required";
-                } else {
-                    $array[$i] = test_input($_POST["Q".$i]);
-                }
-            }
+        for ($i=0; $i < 20; $i++) { 
+          $array[$i] = "";
+          $genderErrArr[$i] = " ";
         }
-        function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-          }
+      
         ?>
-        <form action="" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <p>Be Honest and Reflective: Answer the questions as honestly and accurately as possible. Reflect on your thoughts, feelings, and behaviors related to anxiety. Try not to overthink or second-guess your responses.</p>
+        <p><strong>unanswered Prompts counts as 0 points</strong></p>
+        @csrf
         @foreach($results as $result)
         <label for="{{ $result->id }}">{{ $loop->index+1 }}. {{ $result->Question }}</label>
             <?php $jsonAnswers = json_decode($result->AnswerValues); ?>
-            @foreach($jsonAnswers as $values)
-            <label><input type="radio" name="Q{{ $result->id }}" value="{{ $loop->index }}">{{$values}}</label>
+            @foreach($jsonAnswers as $key => $value)
+            <label><input type="radio" name="Q{{ $result->id }}" value="{{ $key }}">{{$value}}</label>
             @endforeach
-           
         @endforeach
         <input type="submit" value="Submit">
         </form>
