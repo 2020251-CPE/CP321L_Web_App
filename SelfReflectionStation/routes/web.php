@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\QuizController;
 
 
 /*
@@ -15,12 +16,11 @@ use App\Http\Controllers\LandingPageController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/app/{page}',[LandingPageController::class,'LDPG'])->name('search');
-
-Route::redirect('/','/app/home',302);
-Route::redirect('/app','/app/home',302);
-
 Auth::routes();
+Route::get('/app/{page}', [LandingPageController::class, 'LDPG'])->name('search');
+Route::redirect('/', '/app/home', 302);
 
-Route::get('/home1', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/test/{page}', [App\Http\Controllers\QuizController::class, 'GetQuiz']);
+Route::post('/test/{page}', [App\Http\Controllers\QuizController::class, 'storeAndSolve']);
+
