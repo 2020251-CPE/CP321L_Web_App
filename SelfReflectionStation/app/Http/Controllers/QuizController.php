@@ -22,20 +22,30 @@ class QuizController extends Controller{
     }
 
     //CODE BELOW TO BE CONTINUED
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-      }
-    public function TakeAnswers(){
-            for ($i = 0; $i < 20; $i++) {
-                if (empty($_POST["Q".$i])) {
-                    $genderErr = "Answer is required";
-                } else {
-                    $array[$i] = test_input($_POST["Q".$i]);
-                }
-            }
+    public function storeAndSolve(Request $request, $key){
+        $case = str_replace("Test","",ucwords(str_replace("_"," ",$key)));
+        $total = 0;
+        for ($i=0; $i < 21; $i++) {
+            $total += $request->input('Q'.strval($i));
+        }
+
+        //Scoring system of TESTS
+        $totalInt=(int)$total;
+        if($totalInt >= 0 && $totalInt < 20){
+            $result = "You may have minimum to no symptoms of ".$case;
+        } else if ($totalInt > 21 && $totalInt < 40){
+            $result = "You may have mild symptoms of ".$case;
+        } else if ($totalInt > 41 && $totalInt < 60){
+            $result = "You may have moderate symptoms of ".$case;
+        }else if ($totalInt > 61 && $totalInt <= 80){
+            $result = "You may have severe symptoms of ".$case;
+        }
+
+        //Code here to add result to DB with email as ID
+
+        return view('pages/results')
+        ->with('total',$total)
+        ->with('result',$result)
+        ->with('bg',$key);
     }
-    
 }
