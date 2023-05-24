@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\CustomAuthController;
 
 
 /*
@@ -24,3 +25,12 @@ Route::redirect('/', '/app/home', 302);
 Route::get('/test/{page}', [App\Http\Controllers\QuizController::class, 'GetQuiz']);
 Route::post('/test/{page}', [App\Http\Controllers\QuizController::class, 'storeAndSolve']);
 
+Route::get('/error/{page}',[App\Http\Controllers\QuizController::class, 'tempRedirect']);
+
+Route::get('/sign_up',[App\Http\Controllers\CustomAuthController::class,'signUp']);
+Route::post('/sign_up',[App\Http\Controllers\CustomAuthController::class,'insertCredentials']);
+
+Route::get('/log_in',[App\Http\Controllers\CustomAuthController::class,'logInPage']);
+Route::post('/log_in',[App\Http\Controllers\CustomAuthController::class,'logIn']);
+
+Route::get('/log_out',[App\Http\Controllers\CustomAuthController::class,'logOut']);
