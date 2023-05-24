@@ -73,6 +73,8 @@
             <p>core: {{$total}} / 80</p> 
             <br>
             {{$result}}
+            <br>
+            <button href="{{ url(app/home') }}" ></button>
         </div>
     </div>
 </body>
