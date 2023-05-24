@@ -3,9 +3,8 @@ CREATE TABLE Accounts (
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id),
     Name varchar(255) NOT NULL,
-    Age INT NOT NULL,
-    Email varchar(100) NOT NULL, 
-    Psswrd varchar(100) NOT NULL,
+    Email varchar(255) NOT NULL, 
+    Password varchar(255) NOT NULL,
     GeneralAnxietyTestAVR INT,
     AlcoholAddictionTestAVR INT,
     DrugAddictionTestAVR INT,
@@ -47,3 +46,4 @@ CREATE TABLE Gambling_Addiction_Test_Results (
     Email varchar(100) NOT NULL,
     DateAndTimeOfRecord DATETIME NOT NULL
 );
+

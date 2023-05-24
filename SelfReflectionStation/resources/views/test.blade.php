@@ -75,13 +75,13 @@ opacity:85%;
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <p>Be Honest and Reflective: Answer the questions as honestly and accurately as possible. Reflect on your thoughts, feelings, and behaviors related to anxiety. Try not to overthink or second-guess your responses.</p>
-        <p><strong>unanswered Prompts counts as 0 points</strong></p>
+
         @csrf
         @foreach($results as $result)
         <label for="{{ $result->id }}">{{ $loop->index+1 }}. {{ $result->Question }}</label>
             <?php $jsonAnswers = json_decode($result->AnswerValues); ?>
             @foreach($jsonAnswers as $key => $value)
-            <label><input type="radio" name="Q{{ $result->id }}" value="{{ $key }}">{{$value}}</label>
+            <label><input type="radio" name="Q{{ $result->id }}" value="{{ $key+1 }}">{{$value}}</label>
             @endforeach
         @endforeach
         <input type="submit" value="Submit">

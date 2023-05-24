@@ -36,18 +36,23 @@
           <li><a class="nav-link scrollto" href="{{ url('test/general_anxiety_test') }}">Anxiety Test</a></li>
           <li class="dropdown"><a href="#"><span>Addiction Test</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ url('test/shopping_addiction_test') }}">Shopping Addiction Test</a></li>
-              <li><a href="{{ url('test/gambling_addiction_test') }}">Gambling Addiction Test</a></li>
-              <li><a href="{{ url('test/alcohol_addiction_test') }}">Alcohol Addiction Test</a></li>
-              <li><a href="{{ url('test/drug_addiction_test') }}">Drugs Addiction Test</a></li>
+              <li><a href="{{ session('user') ? url('test/shopping_addiction_test') : url('/log_in') }}">Shopping Addiction Test</a></li>
+              <li><a href="{{ session('user') ? url('test/gambling_addiction_test') : url('/log_in')  }}">Gambling Addiction Test</a></li>
+              <li><a href="{{ session('user') ? url('test/alcohol_addiction_test') : url('/log_in')  }}">Alcohol Addiction Test</a></li>
+              <li><a href="{{ session('user') ? url('test/drug_addiction_test') : url('/log_in')  }}">Drugs Addiction Test</a></li>
             </ul>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#about" class="get-started-btn scrollto">Sign Up</a>
-	<a href="#about" class="get-started-btn scrollto">Log In</a>
+      @if(session('user'))
+      <p style="color: white;">Welcome {{ session()->get('user')}}</p>
+      <a href="{{url('/log_out')}}" class="get-started-btn scrollto">Log Out</a>
+      @else
+      <a href="{{url('/sign_up')}}" class="get-started-btn scrollto">Sign Up</a>
+      <a href="{{url('/log_in')}}" class="get-started-btn scrollto">Log In</a>
+      @endif
 
     </div>
   </header><!-- End Header -->
@@ -144,7 +149,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-donate-heart"></i></div>
-              <h4><a href="{{ url('test/general_anxiety_test') }}">Anxiety Test</a></h4>
+              <h4><a href="{{ session('user') ? url('test/general_anxiety_test') : url('/log_in') }}">Anxiety Test</a></h4>
               <p>Assesses an individual's level of anxiety through a series of questions. Results can help identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -152,7 +157,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-shopping-bag"></i></div>
-              <h4><a href="{{ url('test/shopping_addiction_test') }}">Shopping Addiction Test</a></h4>
+              <h4><a href="{{ session('user') ? url('test/shopping_addiction_test') : url('/log_in') }}">Shopping Addiction Test</a></h4>
               <p>Evaluates compulsive buying behavior through a series of questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -160,7 +165,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-dice-5"></i></div>
-              <h4><a href="{{ url('test/gambling_addiction_test') }}">Gambling Addiction Test</a></h4>
+              <h4><a href="{{ session('user') ? url('test/gambling_addiction_test') : url('/log_in') }}">Gambling Addiction Test</a></h4>
               <p> Assesses compulsive gambling behavior through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -168,7 +173,7 @@
           <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-beer"></i></div>
-              <h4><a href="{{ url('test/alcohol_addiction_test') }}">Alcohol Addiction Test</a></h4>
+              <h4><a href="{{ session('user') ? url('test/alcohol_addiction_test') : url('/log_in') }}">Alcohol Addiction Test</a></h4>
               <p>Evaluates alcohol use disorder through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -176,7 +181,7 @@
           <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-injection"></i></div>
-              <h4><a href="{{ url('test/drug_addiction_test') }}">Drugs Addiction Test</a></h4>
+              <h4><a href="{{ session('user') ? url('test/drug_addiction_test') : url('/log_in')  }}">Drugs Addiction Test</a></h4>
               <p>Evaluates substance use disorder through questions to identify symptoms and provide recommendation.</p>
             </div>
           </div>
@@ -577,11 +582,11 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('test/general_anxiety_test') }}">Anxiety Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('test/shopping_addiction_test') }}">Shopping Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('test/gambling_addiction_test') }}">Gambling Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('test/alcohol_addiction_test') }}">Alcohol Addiction Test</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('test/drug_addiction_test') }}">Drugs Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ session('user') ? url('test/general_anxiety_test') : url('/log_in') }}">Anxiety Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ session('user') ? url('test/shopping_addiction_test') : url('/log_in')}}">Shopping Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ session('user') ? url('test/gambling_addiction_test') : url('/log_in') }}">Gambling Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ session('user') ? url('test/alcohol_addiction_test') : url('/log_in') }}">Alcohol Addiction Test</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ session('user') ? url('test/drug_addiction_test') : url('/log_in') }}">Drugs Addiction Test</a></li>
             </ul>
           </div>
 
