@@ -34,3 +34,5 @@ Route::get('/log_in',[App\Http\Controllers\CustomAuthController::class,'logInPag
 Route::post('/log_in',[App\Http\Controllers\CustomAuthController::class,'logIn']);
 
 Route::get('/log_out',[App\Http\Controllers\CustomAuthController::class,'logOut']);
+
+Route::get('/progress',[App\Http\Controllers\LandingPageController::class,'showProgressPage']);
