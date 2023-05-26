@@ -24,7 +24,7 @@ class QuizController extends Controller{
                 ;    
     }
 
-    //Redirect Quiz to Temprary error page then bring back to page
+    //Redirect Quiz to Temporary error page then bring back to page
     public function tempRedirect(){
         return View::make('pages/error');
     }
@@ -38,26 +38,40 @@ class QuizController extends Controller{
         }
 
         //Scoring system of TESTS
-        $result = 0;
+        $result = "";
         $totalInt=(int)$total;
         if($totalInt >= 0 && $totalInt < 19){ //redirect to an error page for a bit
             $errorMSG = "Please Complete all the Answers to the Evaluations (^ω^) ";
-            return view('pages/error')->with("redirectTime",4)
-                ->with("key",$key)
-                ->with("errorMSG",$errorMSG);
-        } else if ($totalInt >= 20 && $totalInt < 40){
-            $result = "You may have little to no symptoms of ".$case;
-        } else if ($totalInt > 41 && $totalInt < 60){
-            $result = "You may have mild to moderate symptoms of ".$case;
-        }else if ($totalInt > 61 && $totalInt <= 80){
-            $result = "You may have severe symptoms of ".$case;
-        }
-
-        //Code here to add result to DB with email as ID
-
-        return view('pages/results')
+            return redirect()->back()->withInput()->withErrors(['message' => $errorMSG]);
+            //return view('pages/error')->with("redirectTime",4)->with("key",$key)->with("errorMSG",$errorMSG);
+        } else if ($totalInt >= 20){   
+            
+            if ($totalInt >= 20 && $totalInt < 40){
+                $result = "You may have little to no symptoms of ".$case;
+            } else if ($totalInt > 41 && $totalInt < 60){
+                $result = "You may have mild to moderate symptoms of ".$case;
+            }else if ($totalInt > 61 && $totalInt <= 80){
+                $result = "You may have severe symptoms of ".$case;
+            }
+            //Code here to add result to DB with email as Identifier
+            $table = str_replace("_","",$key);
+            //DATETIME Format - 'YYYY-MM-DD HH:MM:SS'
+            DB::select("insert into ".$table."results (RecordedResult, Email, DateAndTimeOfRecord) VALUES ('".$totalInt."','".session('email')."','".date('Y-m-d H:i:s')."');");
+        
+            return view('pages/results')
             ->with('total',$total)
             ->with('result',$result)
             ->with('bg',$key);
+        
+        }
+
+        
+        
+       
+        
+
+       
+        
+
     }
 }

@@ -62,13 +62,13 @@
     <form action="{{url('/sign_up')}}" method="POST">
       @csrf  
       <label for="username">Username:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" placeholder="Input Name here"  required>
 
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email" required>
+      <input type="text" id="email" name="email" placeholder="Input Email here"  required>
       
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" placeholder="Input password here"  required>
 
       <input type="submit" value="Sign Up">
     </form>
