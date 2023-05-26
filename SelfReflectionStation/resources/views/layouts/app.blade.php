@@ -31,9 +31,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{url('/app/home')}}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('test/general_anxiety_test') }}">Anxiety Test</a></li>
+          <li><a class="nav-link scrollto" href="{{ session('user') ? url('test/general_anxiety_test') : url('/log_in')  }}">Anxiety Test</a></li>
           <li class="dropdown"><a href="#"><span>Addiction Test</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ session('user') ? url('test/shopping_addiction_test') : url('/log_in') }}">Shopping Addiction Test</a></li>
@@ -47,11 +47,22 @@
       </nav><!-- .navbar -->
 
       @if(session('user'))
-      <p style="color: white;">Welcome {{ session()->get('user')}}</p>
-      <a href="{{url('/log_out')}}" class="get-started-btn scrollto">Log Out</a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" style="color: white;" disabled>Welcome, {{ session()->get('user')}}!</a></li>
+          <li><a class="nav-link scrollto" href="{{url('/progress')}}" class="get-started-btn scrollto">Progress</a></li>
+          <li><a href="" disabled>|</a></li>
+          <li><a class="nav-link scrollto" href="{{url('/log_out')}}" class="get-started-btn scrollto">Log Out</a></li>
+        </ul>
+      </nav>
       @else
-      <a href="{{url('/sign_up')}}" class="get-started-btn scrollto">Sign Up</a>
-      <a href="{{url('/log_in')}}" class="get-started-btn scrollto">Log In</a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{{url('/sign_up')}}" class="get-started-btn scrollto">Sign Up</a></li>
+          <l><a href="" disabled>|</a></l>
+          <li><a class="nav-link scrollto" href="{{url('/log_in')}}" class="get-started-btn scrollto">Log In</a></li>
+        </ul>
+      </nav>
       @endif
 
     </div>
