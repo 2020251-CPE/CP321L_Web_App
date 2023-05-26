@@ -70,11 +70,11 @@
 <body>
     <div class="main">
         <div class="container">
-            <p>core: {{$total}} / 80</p> 
+            <p>core: {{$total}} / 100</p> 
             <br>
             {{$result}}
             <br>
-            <button href="{{ url(app/home') }}" ></button>
+            <button href="{{url('/app/home')}}" >Back to Home</button>
         </div>
     </div>
 </body>
