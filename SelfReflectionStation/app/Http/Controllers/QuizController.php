@@ -58,20 +58,27 @@ class QuizController extends Controller{
             //DATETIME Format - 'YYYY-MM-DD HH:MM:SS'
             DB::select("insert into ".$table."results (RecordedResult, Email, DateAndTimeOfRecord) VALUES ('".$totalInt."','".session('email')."','".date('Y-m-d H:i:s')."');");
         
+
+            //Query Advices and Web resources
+            if(strpos($case, "Anxiety") !== false){
+                $advises = DB::table('generalanxietyadvices')->inRandomOrder()->limit(5)->get(); 
+                $onlineResource = DB::table('generalanxietyonlineresource')->inRandomOrder()->limit(5)->get();           
+            } else if (strpos($case, "Addiction") !== false){
+                $advises = DB::table('generaladdictionadvices')->inRandomOrder()->limit(5)->get(); 
+                $onlineResource = DB::table(str_replace("test","",ucwords(str_replace("_","",$key))).'onlineresource')->inRandomOrder()->limit(5)->get(); 
+            } else {
+
+            }
+            
+
             return view('pages/results')
             ->with('total',$total)
             ->with('result',$result)
-            ->with('bg',$key);
+            ->with('bg',$key)
+            ->with('advices',$advises)
+            ->with('onlineResource',$onlineResource)
+            ;
         
         }
-
-        
-        
-       
-        
-
-       
-        
-
     }
 }
