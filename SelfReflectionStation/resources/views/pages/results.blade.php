@@ -75,7 +75,23 @@
             {{$result}}
             <br>
             <button href="{{url('/app/home')}}" >Back to Home</button>
-        </div>
+            <br>
+            <h3>Advices</h3>
+            <p>Please note that while these suggestions may be helpful, it's important to consult with a healthcare professional for personalized advice and treatment options for anxiety-related concerns.</p>
+            <ul>
+            @foreach($advices as $advice)
+            <li><p><strong>{{$advice->advice}}</strong>-{{$advice->details}}  </p></li>
+            @endforeach
+            </ul>
+            <hr>
+            <h3>Additional Resources</h3>
+            <p>These suggestions may serve as general advice. For comprehensive support and personalized treatment, it is recommended to consult with professionals specializing in addiction and recovery.</p>
+            <ul>
+            @foreach($onlineResource as $resource)
+            <li><p><strong><a href="{{$resource->URL}}">{{$resource->Website}}</a></strong>- {{$resource->Details}}  </p></li>
+            @endforeach
+            </ul>
+          </div>
     </div>
 </body>
 </html>
