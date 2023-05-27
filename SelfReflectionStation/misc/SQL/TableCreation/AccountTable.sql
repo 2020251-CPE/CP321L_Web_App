@@ -11,6 +11,13 @@ CREATE TABLE Accounts (
     ShoppingAddictionTestAVR INT,
     GamblingAddictionTestAVR INT
 );
+CREATE TABLE Admins(
+    id INT NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (id),
+    Name varchar(255) NOT NULL,
+    Email varchar(255) NOT NULL, 
+    Password varchar(255) NOT NULL
+);
 CREATE TABLE AnxietyTestResults (
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id),
@@ -47,3 +54,5 @@ CREATE TABLE Gambling_Addiction_Test_Results (
     DateAndTimeOfRecord DATETIME NOT NULL
 );
 
+ALTER TABLE anxietytestresults RENAME GeneralAnxietyTestResults;
+ALTER TABLE Gambling_Addiction_Test_Results RENAME GamblingAddictionTestResults;
