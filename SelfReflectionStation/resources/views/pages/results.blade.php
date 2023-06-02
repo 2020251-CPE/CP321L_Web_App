@@ -9,8 +9,6 @@
     }
     body {
       font-family: Arial, sans-serif;
-      height: 100vh;
-  width: 100vw;
       
     }
     .main{
@@ -70,11 +68,14 @@
 <body>
     <div class="main">
         <div class="container">
-            <p>core: {{$total}} / 100</p> 
+            <p>score: {{$total}} / 100</p> 
             <br>
-            {{$result}}
+            <h2> {{$result}}</h2>
+           
             <br>
-            <button href="{{url('/app/home')}}" >Back to Home</button>
+            <form action="{{url('/')}}" method="get">
+            <input type="submit" value="Back to Home">
+            </form>
             <br>
             <h3>Advices</h3>
             <p>Please note that while these suggestions may be helpful, it's important to consult with a healthcare professional for personalized advice and treatment options for anxiety-related concerns.</p>
