@@ -9,8 +9,7 @@
     }
     body {
       font-family: Arial, sans-serif;
-      height: 100vh;
-      width: 100vw;
+
     }
     .main{
         background-image: url("{{asset('img/bg/signupBG.jpg')}}"); /* FIX BACKGROUND, IT Scrolls up too when scrolling Up */
@@ -69,7 +68,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
-    <?php 
+    <?php
+
+use function PHPUnit\Framework\isEmpty;
+
     $tests = [
         'GAR' => [
             'results' => [],
@@ -100,28 +102,47 @@
         'SAR' => $SAR,
         'DAR' => $DAR
     ];
-    
+
+
     foreach ($testData as $testName => $testResults) {
         foreach ($testResults as $item) {
             $tests[$testName]['results'][] = $item->RecordedResult;
             $tests[$testName]['time'][] = $item->DateAndTimeOfRecord;
+        
         }
     }
+
     
+
+        $GAVR = (count($tests['GAR']['results'])==0)? "No data Yet" : array_sum($tests['GAR']['results'])/count($tests['GAR']['results']); 
+        $AAVR = (count($tests['AAR']['results'])==0)? "No data Yet" : array_sum($tests['AAR']['results'])/count($tests['AAR']['results']); 
+        $GMVR = (count($tests['GMAR']['results'])==0)?  "No data Yet" : array_sum($tests['GMAR']['results'])/count($tests['GMAR']['results']);
+        $SVR = (count($tests['SAR']['results'])==0)?  "No data Yet" : array_sum($tests['SAR']['results'])/count($tests['SAR']['results']);
+        $DVR = (count($tests['DAR']['results'])==0)? "No data Yet" : array_sum($tests['DAR']['results'])/count($tests['DAR']['results']);
+
+
     ?>
     <div class="main">
         <div class="container">
             <h4>Name: {{session('user');}}</h4>
-            <hr>
+            <hr>    
+            <?php 
+            date_default_timezone_set('Asia/Manila');
+            echo "Created date is " . date("Y-m-d h:i:sa"); ?>
             <h5>General Anxiety Test Results</h5>
+            <h6>Average = {{$GAVR}}</h6>
             <canvas id="GeneralAnxietyTest" style="width:100%;max-width:600px"></canvas>
             <h5>Alcohol Addiction Test Results</h5>
+            <h6>Average = {{$AAVR}}</h6>
             <canvas id="AlcoholAddictionTest" style="width:100%;max-width:600px"></canvas>
             <h5>Gambling Addiction Test</h5>
+            <h6>Average = {{$GMVR}}</h6>
             <canvas id="GamblingAddictionTest" style="width:100%;max-width:600px"></canvas>
             <h5>Shopping Addiction Test Results</h5>
+            <h6>Average = {{$SVR}}</h6>
             <canvas id="ShoppingAddictionTest" style="width:100%;max-width:600px"></canvas>
             <h5>Drug Addiction Test Results</h5>
+            <h6>Average = {{$DVR}}</h6>
             <canvas id="DrugAddictionTest" style="width:100%;max-width:600px"></canvas>
         
         </div>
@@ -143,6 +164,8 @@
         <?php echo json_encode($tests['SAR']['results']); ?>,
         <?php echo json_encode($tests['DAR']['results']); ?>
     ];
+
+
    
     //Creates the Progress Charts for each test
     for (let i = 0; i < chartNames.length; i++) {                  

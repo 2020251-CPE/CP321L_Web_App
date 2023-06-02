@@ -15,6 +15,7 @@ class QuizController extends Controller{
         $query = str_replace("_","",$key);
         $results = DB::table($query)
             ->inRandomOrder()
+            ->limit(20)
             ->get();
         return view('test')
                 ->with('results',$results)
@@ -56,6 +57,7 @@ class QuizController extends Controller{
             //Code here to add result to DB with email as Identifier
             $table = str_replace("_","",$key);
             //DATETIME Format - 'YYYY-MM-DD HH:MM:SS'
+            date_default_timezone_set('Asia/Manila');
             DB::select("insert into ".$table."results (RecordedResult, Email, DateAndTimeOfRecord) VALUES ('".$totalInt."','".session('email')."','".date('Y-m-d H:i:s')."');");
         
 

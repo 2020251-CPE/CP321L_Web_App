@@ -28,7 +28,7 @@ class LandingPageController extends Controller
             ->with('GMAR',$gamblingAddictionResults)
             ->with('SAR',$shoppingAddictionResults)
             ->with('DAR',$drugAddictionResults)
-            ->with('emptyArray<SG',$emptyArrayMSG)
+            ->with('emptyArrayMSG',$emptyArrayMSG)
             ;
     }
 }

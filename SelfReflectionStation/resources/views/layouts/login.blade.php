@@ -65,7 +65,9 @@
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="Input password here" required>
-
+      @error('error')
+        <p>{{$message}}</p>
+      @enderror
       <input type="submit" value="Login">
     </form>
     </form>
