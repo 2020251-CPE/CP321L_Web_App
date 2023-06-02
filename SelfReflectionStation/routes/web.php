@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -36,3 +37,6 @@ Route::post('/log_in',[App\Http\Controllers\CustomAuthController::class,'logIn']
 Route::get('/log_out',[App\Http\Controllers\CustomAuthController::class,'logOut']);
 
 Route::get('/progress',[App\Http\Controllers\LandingPageController::class,'showProgressPage']);
+
+//ADMIN Stuff
+Route::get('/adminPage',[App\Http\Controllers\AdministrationController::class, 'getAdminPage']);
